@@ -1,6 +1,6 @@
 namespace My.Home.Work.Oop;
 
-public class Player //Работа с классами
+public class Player //ДЗ: Работа с классами
 {
     private string name;
     private int ievel;
