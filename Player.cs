@@ -16,8 +16,8 @@ public class Player //ДЗ: Работа с классами
     public void PrintInfo()
     {
         Console.WriteLine("Информация об игроке:");
-        Console.WriteLine("Имя: {0}", this.name);
-        Console.WriteLine("Уровень: {0}", this.ievel);
-        Console.WriteLine("Здоровье: {0}", this.health);
+        Console.WriteLine($"Имя: {name}");
+        Console.WriteLine($"Уровень: {ievel}");
+        Console.WriteLine($"Здоровье: {health}");
     }
 }
