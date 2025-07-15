@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("OOP")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Deck of cards")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+94c8dc40438b26f09360d1d13b9ded4ed09486d0")]
-[assembly: System.Reflection.AssemblyProductAttribute("OOP")]
-[assembly: System.Reflection.AssemblyTitleAttribute("OOP")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyProductAttribute("Deck of cards")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Deck of cards")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Создано классом WriteCodeFragment MSBuild.

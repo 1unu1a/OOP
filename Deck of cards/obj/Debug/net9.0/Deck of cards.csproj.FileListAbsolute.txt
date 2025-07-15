@@ -1,0 +1,14 @@
+/Users/desertik/Work/OOP/Deck of cards/bin/Debug/net9.0/Deck of cards
+/Users/desertik/Work/OOP/Deck of cards/bin/Debug/net9.0/Deck of cards.deps.json
+/Users/desertik/Work/OOP/Deck of cards/bin/Debug/net9.0/Deck of cards.runtimeconfig.json
+/Users/desertik/Work/OOP/Deck of cards/bin/Debug/net9.0/Deck of cards.dll
+/Users/desertik/Work/OOP/Deck of cards/bin/Debug/net9.0/Deck of cards.pdb
+/Users/desertik/Work/OOP/Deck of cards/obj/Debug/net9.0/Deck of cards.GeneratedMSBuildEditorConfig.editorconfig
+/Users/desertik/Work/OOP/Deck of cards/obj/Debug/net9.0/Deck of cards.AssemblyInfoInputs.cache
+/Users/desertik/Work/OOP/Deck of cards/obj/Debug/net9.0/Deck of cards.AssemblyInfo.cs
+/Users/desertik/Work/OOP/Deck of cards/obj/Debug/net9.0/Deck of cards.csproj.CoreCompileInputs.cache
+/Users/desertik/Work/OOP/Deck of cards/obj/Debug/net9.0/Deck of cards.dll
+/Users/desertik/Work/OOP/Deck of cards/obj/Debug/net9.0/refint/Deck of cards.dll
+/Users/desertik/Work/OOP/Deck of cards/obj/Debug/net9.0/Deck of cards.pdb
+/Users/desertik/Work/OOP/Deck of cards/obj/Debug/net9.0/Deck of cards.genruntimeconfig.cache
+/Users/desertik/Work/OOP/Deck of cards/obj/Debug/net9.0/ref/Deck of cards.dll
