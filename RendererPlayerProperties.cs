@@ -1,4 +1,4 @@
-namespace My.Home.Work.Oop;
+namespace My.Home.Work.Oop.Positioning;
 
 public class RendererPlayerProperties //ДЗ: Работа со свойствами
 {

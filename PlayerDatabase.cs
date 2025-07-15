@@ -1,62 +1,59 @@
-namespace My.Home.Work.Oop;
-public class PlayerDatabase //ДЗ: База данных игроков
+using System;
+using System.Collections.Generic;
+
+namespace My.Home.Work.Oop.PlayerSystem
 {
-    private List<PlayerDB> players = new List<PlayerDB>();
-
-    public void AddPlayer(PlayerDB player)
+    public class PlayerDatabase // ДЗ: База данных игроков
     {
-        players.Add(player);
-        Console.WriteLine($"Игрок {player.Name} добавлен.");
-    }
+        private Dictionary<int, Player> players = new Dictionary<int, Player>();
 
-    public void BanPlayer(int id)
-    {
-        PlayerDB player = FindPlayerById(id);
-        if (player != null)
+        public void AddPlayer(Player player)
         {
-            player.IsBanned = true;
-            Console.WriteLine($"Игрок {player.Name} забанен.");
-        }
-    }
-
-    public void UnbanPlayer(int id)
-    {
-        PlayerDB player = FindPlayerById(id);
-        if (player != null)
-        {
-            player.IsBanned = false;
-            Console.WriteLine($"Игрок {player.Name} разбанен.");
-        }
-    }
-
-    public void RemovePlayer(int id)
-    {
-        PlayerDB player = FindPlayerById(id);
-        if (player != null)
-        {
-            players.Remove(player);
-            Console.WriteLine($"Игрок {player.Name} удалён.");
-        }
-    }
-
-    public void PrintAllPlayers()
-    {
-        Console.WriteLine("Список игроков:");
-        foreach (PlayerDB player in players)
-        {
-            player.PrintInfo();
-        }
-    }
-
-    private PlayerDB FindPlayerById(int id)
-    {
-        foreach (PlayerDB player in players)
-        {
-            if (player.Id == id)
+            if (!players.ContainsKey(player.Id))
             {
-                return player;
+                players.Add(player.Id, player);
+                Console.WriteLine($"Игрок {player.Name} добавлен.");
+            }
+            else
+            {
+                Console.WriteLine($"Игрок с ID {player.Id} уже существует.");
             }
         }
-        return null;
+
+        public void BanPlayer(int id)
+        {
+            if (players.TryGetValue(id, out Player player))
+            {
+                player.IsBanned = true;
+                Console.WriteLine($"Игрок {player.Name} забанен.");
+            }
+        }
+
+        public void UnbanPlayer(int id)
+        {
+            if (players.TryGetValue(id, out Player player))
+            {
+                player.IsBanned = false;
+                Console.WriteLine($"Игрок {player.Name} разбанен.");
+            }
+        }
+
+        public void RemovePlayer(int id)
+        {
+            if (players.TryGetValue(id, out Player player))
+            {
+                players.Remove(id);
+                Console.WriteLine($"Игрок {player.Name} удалён.");
+            }
+        }
+
+        public void PrintAllPlayers()
+        {
+            Console.WriteLine("Список игроков:");
+            foreach (var pair in players)
+            {
+                pair.Value.PrintInfo();
+            }
+        }
     }
 }

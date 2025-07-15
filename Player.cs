@@ -1,23 +1,23 @@
-namespace My.Home.Work.Oop;
-
-public class Player //ДЗ: Работа с классами
+namespace My.Home.Work.Oop.PlayerSystem
 {
-    private string name;
-    private int level;
-    private int health;
-
-    public Player(string name, int level, int health)
+    public class Player // ДЗ: База данных игроков, работа с классами
     {
-        this.name = name;
-        this.level = level;
-        this.health = health;
-    }
+        public int Id { get; private set; }
+        public string Name { get; set; }
+        public int Level { get; set; }
+        public bool IsBanned { get; set; }
 
-    public void PrintInfo()
-    {
-        Console.WriteLine("Информация об игроке:");
-        Console.WriteLine($"Имя: {name}");
-        Console.WriteLine($"Уровень: {level}");
-        Console.WriteLine($"Здоровье: {health}");
+        public Player(int id, string name, int level)
+        {
+            Id = id;
+            Name = name;
+            Level = level;
+            IsBanned = false;
+        }
+
+        public void PrintInfo()
+        {
+            Console.WriteLine($"ID: {Id}, Ник: {Name}, Уровень: {Level}, Бан: {(IsBanned ? "Да" : "Нет")}");
+        }
     }
 }

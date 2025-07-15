@@ -1,4 +1,4 @@
-namespace My.Home.Work.Oop;
+namespace My.Home.Work.Oop.Positioning;
 
 public class PlayerProperties //ДЗ: Работа со свойствами
 {
