@@ -4,18 +4,28 @@ internal class Program //ДЗ: Колода карт
 {
     static void Main(string[] args)
     {
-        Deck deck = new Deck();
+        DeckFactory factory = new DeckFactory();
+        List<Card> cards = factory.CreateStandardDeck();
+        Deck deck = new(cards);
         Player player = new Player();
 
         Console.WriteLine("Сколько карт из колоды взять?");
         int count;
-
-        while (!int.TryParse(Console.ReadLine(), out count) || count <= 0)
+        
+        while (true)
         {
-            Console.WriteLine("Введите положительное число:");
+            Console.Write("Введите положительное число: ");
+            string input = Console.ReadLine();
+
+            if (int.TryParse(input, out count) && count > 0)
+            {
+                break;
+            }
+
+            Console.WriteLine("Ошибка ввода. Попробуйте снова.");
         }
 
-        player.DrawCards(deck, count);
+        player.TakeCards(deck, count);
         player.ShowHand();
 
         Console.WriteLine($"\nОсталось карт в колоде: {deck.CardsLeft}");

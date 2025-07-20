@@ -3,42 +3,23 @@ namespace Deck_of_cards;
 public class Deck
 {
     private List<Card> cards;
-    private Random random = new Random();
+    private Random random = new();
 
-    public Deck()
+    public Deck(List<Card> cards)
     {
-        cards = new List<Card>();
-        string[] suits = { "черви", "буба", "крести", "пика" };
-        string[] ranks = {
-            "двойка", "тройка", "четверка", "пятерка", "шестерка", "семерка", "восьмерка", "девятка", "десятка",
-            "валет", "дама", "король", "туз"
-        };
-
-        foreach (string suit in suits)
-        {
-            foreach (string rank in ranks)
-            {
-                cards.Add(new Card(suit, rank));
-            }
-        }
+        this.cards = cards;
     }
 
-    public Card DrawCard()
+    public Card TakeCard()
     {
         if (cards.Count == 0)
-        {
             return null;
-        }
 
         int index = random.Next(cards.Count);
-        Card drawn = cards[index];
+        var card = cards[index];
         cards.RemoveAt(index);
-        return drawn;
+        return card;
     }
 
-    public int CardsLeft
-    {
-        get { return cards.Count; }
-    }
-
+    public int CardsLeft => cards.Count;
 }

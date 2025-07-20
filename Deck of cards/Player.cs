@@ -2,16 +2,16 @@ namespace Deck_of_cards;
 
 public class Player
 {
-    public List<Card> Hand { get; } = new List<Card>();
+    public List<Card> Hand { get; } = new();
 
-    public void DrawCards(Deck deck, int number)
+    public void TakeCards(Deck deck, int number)
     {
         for (int i = 0; i < number; i++)
         {
-            Card card = deck.DrawCard();
+            Card card = deck.TakeCard();
             if (card != null)
             {
-                Hand.Add(card);                
+                Hand.Add(card);
             }
         }
     }

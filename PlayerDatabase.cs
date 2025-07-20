@@ -9,15 +9,13 @@ namespace My.Home.Work.Oop.PlayerSystem
 
         public void AddPlayer(Player player)
         {
-            if (!players.ContainsKey(player.Id))
-            {
-                players.Add(player.Id, player);
-                Console.WriteLine($"Игрок {player.Name} добавлен.");
-            }
-            else
+            if (players.ContainsKey(player.Id))
             {
                 Console.WriteLine($"Игрок с ID {player.Id} уже существует.");
+                return;
             }
+            players.Add(player.Id, player);
+            Console.WriteLine($"Игрок {player.Name} добавлен.");
         }
 
         public void BanPlayer(int id)

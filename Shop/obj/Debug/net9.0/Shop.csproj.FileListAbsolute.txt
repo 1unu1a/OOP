@@ -1,0 +1,14 @@
+/Users/desertik/Work/OOP/Shop/bin/Debug/net9.0/Shop
+/Users/desertik/Work/OOP/Shop/bin/Debug/net9.0/Shop.deps.json
+/Users/desertik/Work/OOP/Shop/bin/Debug/net9.0/Shop.runtimeconfig.json
+/Users/desertik/Work/OOP/Shop/bin/Debug/net9.0/Shop.dll
+/Users/desertik/Work/OOP/Shop/bin/Debug/net9.0/Shop.pdb
+/Users/desertik/Work/OOP/Shop/obj/Debug/net9.0/Shop.GeneratedMSBuildEditorConfig.editorconfig
+/Users/desertik/Work/OOP/Shop/obj/Debug/net9.0/Shop.AssemblyInfoInputs.cache
+/Users/desertik/Work/OOP/Shop/obj/Debug/net9.0/Shop.AssemblyInfo.cs
+/Users/desertik/Work/OOP/Shop/obj/Debug/net9.0/Shop.csproj.CoreCompileInputs.cache
+/Users/desertik/Work/OOP/Shop/obj/Debug/net9.0/Shop.dll
+/Users/desertik/Work/OOP/Shop/obj/Debug/net9.0/refint/Shop.dll
+/Users/desertik/Work/OOP/Shop/obj/Debug/net9.0/Shop.pdb
+/Users/desertik/Work/OOP/Shop/obj/Debug/net9.0/Shop.genruntimeconfig.cache
+/Users/desertik/Work/OOP/Shop/obj/Debug/net9.0/ref/Shop.dll

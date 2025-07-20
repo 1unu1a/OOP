@@ -1,0 +1,14 @@
+/Users/desertik/Work/OOP/Book storage/bin/Debug/net9.0/Book storage
+/Users/desertik/Work/OOP/Book storage/bin/Debug/net9.0/Book storage.deps.json
+/Users/desertik/Work/OOP/Book storage/bin/Debug/net9.0/Book storage.runtimeconfig.json
+/Users/desertik/Work/OOP/Book storage/bin/Debug/net9.0/Book storage.dll
+/Users/desertik/Work/OOP/Book storage/bin/Debug/net9.0/Book storage.pdb
+/Users/desertik/Work/OOP/Book storage/obj/Debug/net9.0/Book storage.GeneratedMSBuildEditorConfig.editorconfig
+/Users/desertik/Work/OOP/Book storage/obj/Debug/net9.0/Book storage.AssemblyInfoInputs.cache
+/Users/desertik/Work/OOP/Book storage/obj/Debug/net9.0/Book storage.AssemblyInfo.cs
+/Users/desertik/Work/OOP/Book storage/obj/Debug/net9.0/Book storage.csproj.CoreCompileInputs.cache
+/Users/desertik/Work/OOP/Book storage/obj/Debug/net9.0/Book storage.dll
+/Users/desertik/Work/OOP/Book storage/obj/Debug/net9.0/refint/Book storage.dll
+/Users/desertik/Work/OOP/Book storage/obj/Debug/net9.0/Book storage.pdb
+/Users/desertik/Work/OOP/Book storage/obj/Debug/net9.0/Book storage.genruntimeconfig.cache
+/Users/desertik/Work/OOP/Book storage/obj/Debug/net9.0/ref/Book storage.dll
