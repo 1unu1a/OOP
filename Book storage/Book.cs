@@ -12,9 +12,25 @@ public class Book
         Author = author;
         Year = year;
     }
-
-    public override string ToString()
+    
+    public override bool Equals(object obj)
     {
-        return $"{Title} — {Author}, {Year}";
+        if (obj is not Book other)
+            return false;
+        
+        return Title.Equals(other.Title, StringComparison.OrdinalIgnoreCase)
+               && Author.Equals(other.Author, StringComparison.OrdinalIgnoreCase)
+               && Year == other.Year;
     }
+
+    public override int GetHashCode()
+    {
+        return HashCode.Combine(
+            Title.ToLowerInvariant(),
+            Author.ToLowerInvariant(),
+            Year);
+    }
+
+    public string GetInfo() => $"{Title} — {Author} ({Year})";
+    
 }

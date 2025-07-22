@@ -17,34 +17,89 @@
             
             while (true)
             {
-                Console.WriteLine("Введите имя автора для поиска (или 'exit' для выхода):");
+                Console.WriteLine("\nВыберите действие:");
+                Console.WriteLine("1. Добавить книгу");
+                Console.WriteLine("2. Показать все книги");
+                Console.WriteLine("3. Удалить книгу");
+                Console.WriteLine("4. Найти книги по автору");
+                Console.WriteLine("5. Найти книги по названию");
+                Console.WriteLine("6. Найти книги по году");
+                Console.WriteLine("0. Выход");
+
                 string input = Console.ReadLine();
 
-                if (input.ToLower() == "exit")
+                switch (input)
                 {
-                    break;                    
-                }
-
-                AuthorFilter filter = new AuthorFilter(input);
-                
-                bool found = false;
-                foreach (Book book in library.GetAllBooks())
-                {
-                    if (filter.Matches(book))
-                    {
-                        found = true;
+                    case "1":
+                        Console.WriteLine("Введите название:");
+                        string title = Console.ReadLine();
+                        Console.WriteLine("Введите автора:");
+                        string author = Console.ReadLine();
+                        Console.WriteLine("Введите год:");
+                        int year;
+                        while (!int.TryParse(Console.ReadLine(), out year))
+                        {
+                            Console.WriteLine("Введите корректный год:");
+                        }
+                        library.AddBook(new Book(title, author, year));
                         break;
-                    }
-                }
 
-                if (!found)
-                {
-                    Console.WriteLine($"Книг автора '{input}' не найдено. Попробуйте снова.\n");
-                    continue;
-                }
+                    case "2":
+                        library.ShowAllBooks();
+                        break;
+                    
+                    case "3":
+                        Console.WriteLine("Введите название книги для удаления:");
+                        string removeTitle = Console.ReadLine();
 
-                Console.WriteLine($"Книги автора '{input}':");
-                library.ShowBooksByFilter(filter);
+                        Console.WriteLine("Введите автора:");
+                        string removeAuthor = Console.ReadLine();
+
+                        Console.WriteLine("Введите год издания:");
+                        if (int.TryParse(Console.ReadLine(), out int removeYear))
+                        {
+                            Book bookToRemove = new Book(removeTitle, removeAuthor, removeYear);
+                            library.RemoveBook(bookToRemove);
+                        }
+                        else
+                        {
+                            Console.WriteLine("Некорректный год.");
+                        }
+                        break;
+
+                    case "4":
+                        Console.WriteLine("Введите автора:");
+                        string authorFilter = Console.ReadLine();
+                        List<Book> byAuthor = library.FindBooksByAuthor(authorFilter);
+                        library.ShowBooks(byAuthor);
+                        break;
+
+                    case "5":
+                        Console.WriteLine("Введите название:");
+                        string titleFilter = Console.ReadLine();
+                        List<Book> byTitle = library.FindBooksByTitle(titleFilter);
+                        library.ShowBooks(byTitle);
+                        break;
+
+                    case "6":
+                        Console.WriteLine("Введите год:");
+                        int yearFilter;
+                        while (!int.TryParse(Console.ReadLine(), out yearFilter))
+                        {
+                            Console.WriteLine("Введите корректный год:");
+                        }
+                        List<Book> byYear = library.FindBooksByYear(yearFilter);
+                        library.ShowBooks(byYear);
+                        break;
+
+                    case "0":
+                        Console.WriteLine("До свидания!");
+                        return;
+
+                    default:
+                        Console.WriteLine("Неизвестная команда.");
+                        break;
+                }
             }
         }
     }

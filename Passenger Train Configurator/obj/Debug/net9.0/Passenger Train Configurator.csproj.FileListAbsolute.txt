@@ -1,0 +1,14 @@
+/Users/desertik/Work/OOP/Passenger Train Configurator/bin/Debug/net9.0/Passenger Train Configurator
+/Users/desertik/Work/OOP/Passenger Train Configurator/bin/Debug/net9.0/Passenger Train Configurator.deps.json
+/Users/desertik/Work/OOP/Passenger Train Configurator/bin/Debug/net9.0/Passenger Train Configurator.runtimeconfig.json
+/Users/desertik/Work/OOP/Passenger Train Configurator/bin/Debug/net9.0/Passenger Train Configurator.dll
+/Users/desertik/Work/OOP/Passenger Train Configurator/bin/Debug/net9.0/Passenger Train Configurator.pdb
+/Users/desertik/Work/OOP/Passenger Train Configurator/obj/Debug/net9.0/Passenger Train Configurator.GeneratedMSBuildEditorConfig.editorconfig
+/Users/desertik/Work/OOP/Passenger Train Configurator/obj/Debug/net9.0/Passenger Train Configurator.AssemblyInfoInputs.cache
+/Users/desertik/Work/OOP/Passenger Train Configurator/obj/Debug/net9.0/Passenger Train Configurator.AssemblyInfo.cs
+/Users/desertik/Work/OOP/Passenger Train Configurator/obj/Debug/net9.0/Passenger Train Configurator.csproj.CoreCompileInputs.cache
+/Users/desertik/Work/OOP/Passenger Train Configurator/obj/Debug/net9.0/Passenger Train Configurator.dll
+/Users/desertik/Work/OOP/Passenger Train Configurator/obj/Debug/net9.0/refint/Passenger Train Configurator.dll
+/Users/desertik/Work/OOP/Passenger Train Configurator/obj/Debug/net9.0/Passenger Train Configurator.pdb
+/Users/desertik/Work/OOP/Passenger Train Configurator/obj/Debug/net9.0/Passenger Train Configurator.genruntimeconfig.cache
+/Users/desertik/Work/OOP/Passenger Train Configurator/obj/Debug/net9.0/ref/Passenger Train Configurator.dll
