@@ -12,8 +12,6 @@
             library.AddBook(new Book("Бесы", "Достоевский", 1872));
             library.AddBook(new Book("Капинтанская дочка", "Пушкин", 1836));
             library.AddBook(new Book("Евгений Онегин", "Пушкин", 1831));
-
-            library.ShowAllBooks();
             
             while (true)
             {
@@ -31,65 +29,39 @@
                 switch (input)
                 {
                     case "1":
-                        Console.WriteLine("Введите название:");
-                        string title = Console.ReadLine();
-                        Console.WriteLine("Введите автора:");
-                        string author = Console.ReadLine();
-                        Console.WriteLine("Введите год:");
-                        int year;
-                        while (!int.TryParse(Console.ReadLine(), out year))
-                        {
-                            Console.WriteLine("Введите корректный год:");
-                        }
-                        library.AddBook(new Book(title, author, year));
+                        AddBookFlow(library);
                         break;
 
                     case "2":
-                        library.ShowAllBooks();
+                        library.ShowBooks(library.GetAllBooks());
                         break;
                     
                     case "3":
-                        Console.WriteLine("Введите название книги для удаления:");
-                        string removeTitle = Console.ReadLine();
+                        RemoveBookFlow(library);
+                        break;
 
+                    case "4":
                         Console.WriteLine("Введите автора:");
-                        string removeAuthor = Console.ReadLine();
+                        string author = Console.ReadLine();
+                        library.ShowBooks(library.FindBooks(b => b.Author.Equals(author, StringComparison.OrdinalIgnoreCase)));
+                        break;
 
-                        Console.WriteLine("Введите год издания:");
-                        if (int.TryParse(Console.ReadLine(), out int removeYear))
+                    case "5":
+                        Console.WriteLine("Введите название:");
+                        string title = Console.ReadLine();
+                        library.ShowBooks(library.FindBooks(b => b.Title.Equals(title, StringComparison.OrdinalIgnoreCase)));
+                        break;
+
+                    case "6":
+                        Console.WriteLine("Введите год:");
+                        if (int.TryParse(Console.ReadLine(), out int year))
                         {
-                            Book bookToRemove = new Book(removeTitle, removeAuthor, removeYear);
-                            library.RemoveBook(bookToRemove);
+                            library.ShowBooks(library.FindBooks(b => b.Year == year));
                         }
                         else
                         {
                             Console.WriteLine("Некорректный год.");
                         }
-                        break;
-
-                    case "4":
-                        Console.WriteLine("Введите автора:");
-                        string authorFilter = Console.ReadLine();
-                        List<Book> byAuthor = library.FindBooksByAuthor(authorFilter);
-                        library.ShowBooks(byAuthor);
-                        break;
-
-                    case "5":
-                        Console.WriteLine("Введите название:");
-                        string titleFilter = Console.ReadLine();
-                        List<Book> byTitle = library.FindBooksByTitle(titleFilter);
-                        library.ShowBooks(byTitle);
-                        break;
-
-                    case "6":
-                        Console.WriteLine("Введите год:");
-                        int yearFilter;
-                        while (!int.TryParse(Console.ReadLine(), out yearFilter))
-                        {
-                            Console.WriteLine("Введите корректный год:");
-                        }
-                        List<Book> byYear = library.FindBooksByYear(yearFilter);
-                        library.ShowBooks(byYear);
                         break;
 
                     case "0":
@@ -99,6 +71,43 @@
                     default:
                         Console.WriteLine("Неизвестная команда.");
                         break;
+                }
+            }
+            static void AddBookFlow(Library library)
+            {
+                Console.WriteLine("Введите название:");
+                string title = Console.ReadLine();
+
+                Console.WriteLine("Введите автора:");
+                string author = Console.ReadLine();
+
+                Console.WriteLine("Введите год:");
+                if (int.TryParse(Console.ReadLine(), out int year))
+                {
+                    library.AddBook(new Book(title, author, year));
+                }
+                else
+                {
+                    Console.WriteLine("Некорректный год.");
+                }
+            }
+            
+            static void RemoveBookFlow(Library library)
+            {
+                Console.WriteLine("Введите название:");
+                string title = Console.ReadLine();
+
+                Console.WriteLine("Введите автора:");
+                string author = Console.ReadLine();
+
+                Console.WriteLine("Введите год:");
+                if (int.TryParse(Console.ReadLine(), out int year))
+                {
+                    library.RemoveBook(new Book(title, author, year));
+                }
+                else
+                {
+                    Console.WriteLine("Некорректный год.");
                 }
             }
         }

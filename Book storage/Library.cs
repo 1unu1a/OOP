@@ -16,49 +16,6 @@ public class Library
         Console.WriteLine("Книга добавлена.");
     }
     
-    public List<Book> FindBooksByAuthor(string author)
-    {
-        return books.FindAll(b => b.Author.Equals(author, StringComparison.OrdinalIgnoreCase));
-    }
-
-    public List<Book> FindBooksByTitle(string title)
-    {
-        return books.FindAll(b => b.Title.Equals(title, StringComparison.OrdinalIgnoreCase));
-    }
-
-    public List<Book> FindBooksByYear(int year)
-    {
-        return books.FindAll(b => b.Year == year);
-    }
-
-    public void ShowBooks(List<Book> filteredBooks)
-    {
-        if (filteredBooks.Count == 0)
-        {
-            Console.WriteLine("Книги не найдены.");
-            return;
-        }
-
-        foreach (Book book in filteredBooks)
-        {
-            Console.WriteLine(book.GetInfo());
-        }
-    }
-
-    public void ShowAllBooks()
-    {
-        if (books.Count == 0)
-        {
-            Console.WriteLine("Библиотека пуста.");
-            return;
-        }
-
-        foreach (Book book in books)
-        {
-            Console.WriteLine(book.GetInfo());
-        }
-    }
-    
     public bool RemoveBook(Book book)
     {
         if (books.Remove(book))
@@ -69,5 +26,29 @@ public class Library
 
         Console.WriteLine("Книга не найдена.");
         return false;
+    }
+
+    public List<Book> FindBooks(Func<Book, bool> predicate)
+    {
+        return books.Where(predicate).ToList();
+    }
+
+    public List<Book> GetAllBooks()
+    {
+        return new List<Book>(books);
+    }
+
+    public void ShowBooks(List<Book> booksToShow)
+    {
+        if (booksToShow.Count == 0)
+        {
+            Console.WriteLine("Книги не найдены.");
+            return;
+        }
+
+        foreach (var book in booksToShow)
+        {
+            Console.WriteLine(book.GetInfo());
+        }
     }
 }
