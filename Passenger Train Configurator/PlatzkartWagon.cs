@@ -4,5 +4,5 @@ public class PlatzkartWagon : Wagon
 {
     public PlatzkartWagon() : base(54) { }
 
-    public override string GetWagonType() => "Плацкарт";
+    public override WagonType Type => WagonType.Platzkart;
 }
