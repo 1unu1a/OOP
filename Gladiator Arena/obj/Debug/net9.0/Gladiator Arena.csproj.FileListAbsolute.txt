@@ -1,0 +1,14 @@
+/Users/desertik/Work/OOP/Gladiator Arena/bin/Debug/net9.0/Gladiator Arena
+/Users/desertik/Work/OOP/Gladiator Arena/bin/Debug/net9.0/Gladiator Arena.deps.json
+/Users/desertik/Work/OOP/Gladiator Arena/bin/Debug/net9.0/Gladiator Arena.runtimeconfig.json
+/Users/desertik/Work/OOP/Gladiator Arena/bin/Debug/net9.0/Gladiator Arena.dll
+/Users/desertik/Work/OOP/Gladiator Arena/bin/Debug/net9.0/Gladiator Arena.pdb
+/Users/desertik/Work/OOP/Gladiator Arena/obj/Debug/net9.0/Gladiator Arena.GeneratedMSBuildEditorConfig.editorconfig
+/Users/desertik/Work/OOP/Gladiator Arena/obj/Debug/net9.0/Gladiator Arena.AssemblyInfoInputs.cache
+/Users/desertik/Work/OOP/Gladiator Arena/obj/Debug/net9.0/Gladiator Arena.AssemblyInfo.cs
+/Users/desertik/Work/OOP/Gladiator Arena/obj/Debug/net9.0/Gladiator Arena.csproj.CoreCompileInputs.cache
+/Users/desertik/Work/OOP/Gladiator Arena/obj/Debug/net9.0/Gladiator Arena.dll
+/Users/desertik/Work/OOP/Gladiator Arena/obj/Debug/net9.0/refint/Gladiator Arena.dll
+/Users/desertik/Work/OOP/Gladiator Arena/obj/Debug/net9.0/Gladiator Arena.pdb
+/Users/desertik/Work/OOP/Gladiator Arena/obj/Debug/net9.0/Gladiator Arena.genruntimeconfig.cache
+/Users/desertik/Work/OOP/Gladiator Arena/obj/Debug/net9.0/ref/Gladiator Arena.dll

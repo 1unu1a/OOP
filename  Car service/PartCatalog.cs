@@ -2,7 +2,7 @@ namespace Car.Service;
 
 public class PartCatalog
 {
-    public static readonly List<Part> AllParts = new List<Part>()
+    public List<Part> AllParts = new List<Part>()
     {
         new Part("Рычаг", 5000),
         new Part("Фильтр", 1000),
@@ -11,10 +11,12 @@ public class PartCatalog
         new Part("Тормозной диск", 15000),
         new Part("Подушка двигателя", 25000)
     };
+    
+    private readonly Random _random = new Random();
 
-    public static Part GetRandomPart()
+    public Part GetRandomPart()
     {
         Random random = new Random();
-        return AllParts[random.Next(AllParts.Count)];
+        return AllParts[_random.Next(AllParts.Count)];
     }
 }

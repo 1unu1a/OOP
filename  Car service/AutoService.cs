@@ -5,12 +5,13 @@ public class AutoService
     private const int LADOR_COST = 2000;
     private const int PENALTY = 1500;
     
-    private readonly Warehouse _warehouse;
+    private readonly Storage _storage;
+    
     public int Balance { get; private set; }
 
-    public AutoService(Warehouse warehouse, int startingBalance = 10000)
+    public AutoService(Storage storage, int startingBalance = 10000)
     {
-        _warehouse = warehouse;
+        _storage = storage;
         Balance = startingBalance;
     }
 
@@ -18,8 +19,10 @@ public class AutoService
     {
         Console.WriteLine($"\n{car}");
         Console.WriteLine($"Ремонт стоит: {car.BrokenPart.Price + LADOR_COST}₽");
+        
+        var item = _storage.GetItem(car.BrokenPart.Name);
 
-        if (_warehouse.TryUsePart(car.BrokenPart))
+        if (item != null && item.Take())
         {
             int total = car.BrokenPart.Price + LADOR_COST;
             Balance += total;

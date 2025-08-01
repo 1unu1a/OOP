@@ -33,7 +33,7 @@ internal class Program
                 break;
             }
 
-            planner.HandleInput(input);
+            planner.HandleInput(input); 
         }
     }
 }
