@@ -1,0 +1,14 @@
+/Users/desertik/Work/OOP/Supermarket/bin/Debug/net9.0/Supermarket
+/Users/desertik/Work/OOP/Supermarket/bin/Debug/net9.0/Supermarket.deps.json
+/Users/desertik/Work/OOP/Supermarket/bin/Debug/net9.0/Supermarket.runtimeconfig.json
+/Users/desertik/Work/OOP/Supermarket/bin/Debug/net9.0/Supermarket.dll
+/Users/desertik/Work/OOP/Supermarket/bin/Debug/net9.0/Supermarket.pdb
+/Users/desertik/Work/OOP/Supermarket/obj/Debug/net9.0/Supermarket.GeneratedMSBuildEditorConfig.editorconfig
+/Users/desertik/Work/OOP/Supermarket/obj/Debug/net9.0/Supermarket.AssemblyInfoInputs.cache
+/Users/desertik/Work/OOP/Supermarket/obj/Debug/net9.0/Supermarket.AssemblyInfo.cs
+/Users/desertik/Work/OOP/Supermarket/obj/Debug/net9.0/Supermarket.csproj.CoreCompileInputs.cache
+/Users/desertik/Work/OOP/Supermarket/obj/Debug/net9.0/Supermarket.dll
+/Users/desertik/Work/OOP/Supermarket/obj/Debug/net9.0/refint/Supermarket.dll
+/Users/desertik/Work/OOP/Supermarket/obj/Debug/net9.0/Supermarket.pdb
+/Users/desertik/Work/OOP/Supermarket/obj/Debug/net9.0/Supermarket.genruntimeconfig.cache
+/Users/desertik/Work/OOP/Supermarket/obj/Debug/net9.0/ref/Supermarket.dll
