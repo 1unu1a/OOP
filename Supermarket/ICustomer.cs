@@ -3,7 +3,17 @@ namespace Supermarket.System;
 public interface ICustomer
 {
     string Name { get; }
-    decimal Money { get; }
-    void AddToCart(IProduct product);
-    void AttemptPurchase(ISupermarketService supermarket);
+    Wallet Wallet { get; }
+    Basket Basket { get; }
+    Bag Bag { get; }
+
+    bool CanAfford();
+    
+    void RemoveRandomItemFromBasket();
+    
+    decimal GetBasketTotal();
+    
+    void Pay(decimal amount);
+    
+    void MoveBasketToBag();
 }

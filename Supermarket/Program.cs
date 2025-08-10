@@ -16,13 +16,13 @@
             Supermarket supermarket = new (products);
 
             Customer customer1 = new ("Анна", 150);
-            customer1.AddToCart(products[0]);
-            customer1.AddToCart(products[1]);
-            customer1.AddToCart(products[2]);
+            customer1.Basket.AddItem(products[0]);
+            customer1.Basket.AddItem(products[1]);
+            customer1.Basket.AddItem(products[2]);
 
             Customer customer2 = new ("Денис", 100);
-            customer2.AddToCart(products[2]);
-            customer2.AddToCart(products[3]);
+            customer2.Basket.AddItem(products[2]);
+            customer2.Basket.AddItem(products[3]);
 
             supermarket.EnqueueCustomer(customer1);
             supermarket.EnqueueCustomer(customer2);

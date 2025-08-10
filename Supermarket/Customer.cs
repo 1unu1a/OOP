@@ -2,44 +2,33 @@ namespace Supermarket.System;
 
 public class Customer : ICustomer
 {
-    private List<IProduct> _cart = new();
-    private List<IProduct> _bag = new();
-    
     public string Name { get; }
-    public decimal Money { get; private set; }
+    public Wallet Wallet { get; }
+    public Basket Basket { get; }
+    public Bag Bag { get; }
 
     public Customer(string name, decimal money)
     {
         Name = name;
-        Money = money;
+        Wallet = new Wallet(money);
+        Basket = new Basket();
+        Bag = new Bag();
     }
 
-    public void AddToCart(IProduct product) => _cart.Add(product);
+    public bool CanAfford() => Wallet.HasEnough(Basket.GetTotalPrice());
 
-    public void AttemptPurchase(ISupermarketService supermarket)
+    public void RemoveRandomItemFromBasket() => Basket.RemoveRandomItem();
+
+    public decimal GetBasketTotal() => Basket.GetTotalPrice();
+
+    public void Pay(decimal amount) => Wallet.Withdraw(amount);
+
+    public void MoveBasketToBag()
     {
-        while (TotalCartPrice() > Money && _cart.Any())
+        foreach (var item in Basket.GetItems())
         {
-            var removed = _cart[RandomService.GenerateRandomNumber(0, _cart.Count)];
-            _cart.Remove(removed);
-            Console.WriteLine($"{Name} удалил {removed.Name} из корзины из-за нехватки денег.");
+            Bag.AddItem(item);
         }
-
-        decimal total = TotalCartPrice();
-
-        if (total <= Money)
-        {
-            Money -= total;
-            _bag.AddRange(_cart);
-            supermarket.AddEarnings(total);
-            Console.WriteLine($"{Name} успешно оплатил покупки на сумму {total:C}.");
-            _cart.Clear();
-        }
-        else
-        {
-            Console.WriteLine($"{Name} не может оплатить товары. Корзина пуста.");
-        }
+        Basket.Clear();
     }
-
-    private decimal TotalCartPrice() => _cart.Sum(p => p.Price);
 }
