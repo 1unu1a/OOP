@@ -2,19 +2,24 @@ namespace GladiatorArena;
 
 public class Dodger : Fighter
 {
-    public Dodger(string name) : base(name, 100, 10, 3) { }
-
-    public override void TakeDamage(int damage)
+    private readonly double _dodgeChance;
+    public Dodger(string name, FighterConfig config, IBattleLogger logger)
+        : base(name, config, logger)
     {
-        if (UserUtils.GenerateRandomNumber(0, 100) < 30)
-        {
-            Console.WriteLine($"{Name} уклонился от атаки!");
-            return;
-        }
-        base.TakeDamage(damage);
+        _dodgeChance = config.AbilityChance;
     }
 
-    public override void AttackEnemy(Fighter enemy) => enemy.TakeDamage(Attack);
+    protected override int CalculateDamage() => Attack;
 
-    public override Fighter Clone() => new Dodger(Name);
+    protected override int CalculateTakeDamage(int incomingDamage)
+    {
+        if (UserUtils.GenerateRandomNumber(0, 100) < _dodgeChance * 100)
+        {
+            _logger.Log($"{Name} уклонился от атаки!");
+            return 0;
+        }
+        return base.CalculateTakeDamage(incomingDamage);
+    }
+
+    public override Fighter Clone() => new Dodger(Name, _baseConfig, _logger);
 }

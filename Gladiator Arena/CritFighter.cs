@@ -2,20 +2,22 @@ namespace GladiatorArena;
 
 public class CritFighter : Fighter
 {
-    public CritFighter(string name) : base(name, 100, 14, 4) { }
-
-    public override void AttackEnemy(Fighter enemy)
+    private readonly double _critChance;
+    public CritFighter(string name, FighterConfig config, IBattleLogger logger)
+        : base(name, config, logger)
     {
-        if (UserUtils.GenerateRandomNumber(0, 100) < 25)
-        {
-            Console.WriteLine($"{Name} наносит критический удар!");
-            enemy.TakeDamage(Attack * 2);
-        }
-        else
-        {
-            enemy.TakeDamage(Attack);
-        }
+        _critChance = config.AbilityChance;
     }
 
-    public override Fighter Clone() => new CritFighter(Name);
+    protected override int CalculateDamage()
+    {
+        if (UserUtils.GenerateRandomNumber(0, 100) < _critChance * 100)
+        {
+            _logger.Log($"{Name} наносит критический удар!");
+            return Attack * 2;
+        }
+        return Attack;
+    }
+
+    public override Fighter Clone() => new CritFighter(Name, _baseConfig, _logger);
 }

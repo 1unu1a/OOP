@@ -2,24 +2,26 @@ namespace GladiatorArena;
 
 public class Mage : Fighter
 {
-    private int _mana = 3;
-    
-    public Mage(string name) : base(name, 90, 12, 4) { }
+    private int _mana;
+    private readonly int _fireballDamage;
 
-    public override void AttackEnemy(Fighter enemy)
+    public Mage(string name, FighterConfig config, IBattleLogger logger)
+        : base(name, config, logger)
+    {
+        _mana = config.ExtraValue;
+        _fireballDamage = Attack + 10;
+    }
+
+    protected override int CalculateDamage()
     {
         if (_mana > 0)
         {
-            int fireballDamage = Attack + 10;
-            Console.WriteLine($"{Name} применяет Огненный шар на {fireballDamage} урона!");
-            enemy.TakeDamage(fireballDamage);
+            _logger.Log($"{Name} применяет Огненный шар на {_fireballDamage} урона!");
             _mana--;
+            return _fireballDamage;
         }
-        else
-        {
-            enemy.TakeDamage(Attack);
-        }
+        return Attack;
     }
 
-    public override Fighter Clone() => new Mage(Name);
+    public override Fighter Clone() => new Mage(Name, _baseConfig, _logger);
 }

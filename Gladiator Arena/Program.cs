@@ -4,7 +4,9 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Arena arena = new Arena();
+        IBattleLogger logger = new BattleLogger();
+        IFighterFactory factory = new FighterFactory(logger);
+        Arena arena = new Arena(factory, logger);
         arena.Start();
     }
 }

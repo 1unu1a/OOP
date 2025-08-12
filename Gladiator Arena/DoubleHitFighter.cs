@@ -3,19 +3,25 @@ namespace GladiatorArena;
 public class DoubleHitFighter : Fighter
 {
     private int _hitCount;
-    
-    public DoubleHitFighter(string name) : base(name, 100, 13, 5) { }
+    private readonly int _extraHitEvery;
 
-    public override void AttackEnemy(Fighter enemy)
+    public DoubleHitFighter(string name, FighterConfig config, IBattleLogger logger)
+        : base(name, config, logger)
     {
-        _hitCount++;
-        enemy.TakeDamage(Attack);
-        if (_hitCount % 3 == 0)
-        {
-            Console.WriteLine($"{Name} наносит дополнительный удар!");
-            enemy.TakeDamage(Attack);
-        }
+        _extraHitEvery = config.ExtraValue;
     }
 
-    public override Fighter Clone() => new DoubleHitFighter(Name);
+    protected override int CalculateDamage()
+    {
+        _hitCount++;
+        int damage = Attack;
+        if (_hitCount % _extraHitEvery == 0)
+        {
+            _logger.Log($"{Name} наносит дополнительный удар!");
+            damage += Attack;
+        }
+        return damage;
+    }
+
+    public override Fighter Clone() => new DoubleHitFighter(Name, _baseConfig, _logger);
 }

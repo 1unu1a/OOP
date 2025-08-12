@@ -2,24 +2,33 @@ namespace GladiatorArena;
 
 public class Berserker : Fighter
 {
-    private const int MAX_RAGE = 3;
-    private const int HEAL_AMOUNT = 20;
-    
+    private readonly int _maxRage;
+    private readonly int _healAmount;
     private int _rage;
 
-    public Berserker(string name) : base(name, 100, 15, 5) { }
-
-    public override void AttackEnemy(Fighter enemy)
+    public Berserker(string name, FighterConfig config, IBattleLogger logger) 
+        : base(name, config, logger)
     {
-        enemy.TakeDamage(Attack);
+        _maxRage = config.ExtraValue;
+        _healAmount = 20;
+    }
+
+    protected override int CalculateDamage()
+    {
         _rage++;
-        if (_rage >= MAX_RAGE)
+        TryRage();
+        return Attack;
+    }
+
+    private void TryRage()
+    {
+        if (_rage >= _maxRage)
         {
-            Health += HEAL_AMOUNT;
-            Console.WriteLine($"{Name} в ярости! Лечится на {HEAL_AMOUNT} HP.");
+            Health += _healAmount;
+            _logger.Log($"{Name} в ярости! Лечится на {_healAmount} HP.");
             _rage = 0;
         }
     }
 
-    public override Fighter Clone() => new Berserker(Name);
+    public override Fighter Clone() => new Berserker(Name, _baseConfig, _logger);
 }
