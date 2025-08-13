@@ -36,6 +36,7 @@ public abstract class Fighter : IDamageable
     }
 
     protected abstract int CalculateDamage();
+    
     protected virtual int CalculateTakeDamage(int incomingDamage) => Math.Max(0, incomingDamage - Defense);
 
     public abstract Fighter Clone();

@@ -1,0 +1,14 @@
+/Users/desertik/Work/OOP/War/bin/Debug/net9.0/War
+/Users/desertik/Work/OOP/War/bin/Debug/net9.0/War.deps.json
+/Users/desertik/Work/OOP/War/bin/Debug/net9.0/War.runtimeconfig.json
+/Users/desertik/Work/OOP/War/bin/Debug/net9.0/War.dll
+/Users/desertik/Work/OOP/War/bin/Debug/net9.0/War.pdb
+/Users/desertik/Work/OOP/War/obj/Debug/net9.0/War.GeneratedMSBuildEditorConfig.editorconfig
+/Users/desertik/Work/OOP/War/obj/Debug/net9.0/War.AssemblyInfoInputs.cache
+/Users/desertik/Work/OOP/War/obj/Debug/net9.0/War.AssemblyInfo.cs
+/Users/desertik/Work/OOP/War/obj/Debug/net9.0/War.csproj.CoreCompileInputs.cache
+/Users/desertik/Work/OOP/War/obj/Debug/net9.0/War.dll
+/Users/desertik/Work/OOP/War/obj/Debug/net9.0/refint/War.dll
+/Users/desertik/Work/OOP/War/obj/Debug/net9.0/War.pdb
+/Users/desertik/Work/OOP/War/obj/Debug/net9.0/War.genruntimeconfig.cache
+/Users/desertik/Work/OOP/War/obj/Debug/net9.0/ref/War.dll
