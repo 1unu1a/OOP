@@ -1,0 +1,14 @@
+/Users/desertik/Work/OOP/Zoo/bin/Debug/net9.0/Zoo
+/Users/desertik/Work/OOP/Zoo/bin/Debug/net9.0/Zoo.deps.json
+/Users/desertik/Work/OOP/Zoo/bin/Debug/net9.0/Zoo.runtimeconfig.json
+/Users/desertik/Work/OOP/Zoo/bin/Debug/net9.0/Zoo.dll
+/Users/desertik/Work/OOP/Zoo/bin/Debug/net9.0/Zoo.pdb
+/Users/desertik/Work/OOP/Zoo/obj/Debug/net9.0/Zoo.GeneratedMSBuildEditorConfig.editorconfig
+/Users/desertik/Work/OOP/Zoo/obj/Debug/net9.0/Zoo.AssemblyInfoInputs.cache
+/Users/desertik/Work/OOP/Zoo/obj/Debug/net9.0/Zoo.AssemblyInfo.cs
+/Users/desertik/Work/OOP/Zoo/obj/Debug/net9.0/Zoo.csproj.CoreCompileInputs.cache
+/Users/desertik/Work/OOP/Zoo/obj/Debug/net9.0/Zoo.dll
+/Users/desertik/Work/OOP/Zoo/obj/Debug/net9.0/refint/Zoo.dll
+/Users/desertik/Work/OOP/Zoo/obj/Debug/net9.0/Zoo.pdb
+/Users/desertik/Work/OOP/Zoo/obj/Debug/net9.0/Zoo.genruntimeconfig.cache
+/Users/desertik/Work/OOP/Zoo/obj/Debug/net9.0/ref/Zoo.dll

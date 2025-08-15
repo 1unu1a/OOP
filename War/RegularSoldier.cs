@@ -11,6 +11,7 @@ public class RegularSoldier : Soldier
         {
             return;
         }
+        
         var target = enemies[RandomService.Next(0, enemies.Count)];
         Logger.Log($"{Name} атакует {target.Name} на {Damage}");
         target.TakeDamage(Damage);

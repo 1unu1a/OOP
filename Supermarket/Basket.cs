@@ -19,6 +19,7 @@ public class Basket : IItemContainer
         {
             return;
         }
+        
         var index = RandomService.GenerateRandomNumber(0, _items.Count);
         var removed = _items[index];
         _items.RemoveAt(index);

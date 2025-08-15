@@ -16,6 +16,7 @@ public class RandomMultiHitSoldier : Soldier
         {
             return;
         }
+        
         for (int i = 0; i < _hits; i++)
         {
             var target = enemies[RandomService.Next(0, enemies.Count)];

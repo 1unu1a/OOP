@@ -16,6 +16,7 @@ public class StrongSoldier : Soldier
         {
             return;
         }
+        
         var target = enemies[RandomService.Next(0, enemies.Count)];
         int dmg = Damage * _multiplier;
         Logger.Log($"{Name} сильно атакует {target.Name} на {dmg}");

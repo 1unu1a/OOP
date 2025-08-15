@@ -29,6 +29,7 @@ public class Customer : ICustomer
         {
             Bag.AddItem(item);
         }
+        
         Basket.Clear();
     }
 }

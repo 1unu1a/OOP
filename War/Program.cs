@@ -5,7 +5,7 @@ internal class Program
     static void Main(string[] args)
     {
         IBattleLogger logger = new BattleLogger();
-        IRandomService randomService = new UserUtils();
+        IRandomService randomService = new RandomService();
         ISoldierFactory factory = new SoldierFactory(logger, randomService);
 
         var squad1 = new Squad(new List<Soldier>

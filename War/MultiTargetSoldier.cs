@@ -17,6 +17,7 @@ public class MultiTargetSoldier : Soldier
             return;
         }
         var availableTargets = enemies.OrderBy(_ => RandomService.Next(0, 100)).Take(_targetsCount).ToList();
+        
         foreach (var target in availableTargets)
         {
             Logger.Log($"{Name} атакует {target.Name} на {Damage}");

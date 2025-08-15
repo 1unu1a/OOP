@@ -1,6 +1,6 @@
 namespace War;
 
-public class UserUtils : IRandomService
+public class RandomService : IRandomService
 {
     private readonly Random _random = new Random();
     
